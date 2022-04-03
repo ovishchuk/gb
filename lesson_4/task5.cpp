@@ -12,13 +12,7 @@
 bool isLeap(size_t year)
 {
     // если (год не кратен 4) или (кратен 100 но не кратен 400), он невысокосный
-    if ( (year % 4 != 0) || (year % 100 == 0 && year % 400 != 0) )
-    {
-        return false;
-    }
-
-    // все остальные - высокосные
-    return true;
+    return !( (year % 4) || (!(year % 100) && (year % 400)) );
 }
 
 int main()
