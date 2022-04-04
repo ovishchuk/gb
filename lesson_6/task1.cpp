@@ -14,7 +14,7 @@ int * createIntArray(const size_t SIZE)
     // размер не может быть 0
     if ( SIZE > 0 )
     {
-        return new (std::nothrow) int[SIZE];
+        return new int[SIZE]{};
     }
 
     // если SIZE <= 0 
