@@ -26,6 +26,10 @@ int ** createSquareMatrix(const size_t SIZE)
 
         return matrix;
     }
+    else
+    {
+        std::cout << "Ошибка. Размер матрицы должен быть больше ноля" << std::endl;
+    }
 
     // если SIZE <= 0 
     return nullptr;
@@ -46,6 +50,10 @@ void clearSquareMatrix(int ** matrix, const size_t SIZE)
         // удаляем и обнуляем столбцы
         delete [] matrix;
         matrix = nullptr;
+    }
+    else
+    {
+        std::cout << "Ошибка. Нельзя очистить матрицу - nullptr" << std::endl;
     }
 }
 
@@ -85,6 +93,10 @@ int main()
         initSquareMatrixRand(matrix, MATRIX_SIZE);
         printSquareMatrix(matrix, MATRIX_SIZE);
         clearSquareMatrix(matrix, MATRIX_SIZE);
+    }
+    else
+    {
+        std::cout << "Ошибка. Матрица не создана." << std::endl;
     }
 
     return 0;
