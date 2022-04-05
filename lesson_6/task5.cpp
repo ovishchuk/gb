@@ -58,7 +58,7 @@ bool findWordInTxtFile(std::string word, std::string fileName,
                 инкрементирует указатель, а не значение, идентично с  
                     line++;
                 */
-                *line += 1;
+                (*line)++;
             }
 
             foundFlag = buffer.find(word);
@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
         << "\nФайл для поиска: ";
     std::cin >> fileName;
 
-    unsigned line = 7;
+    unsigned line = 0;
     unsigned column = 0;
 
     if ( findWordInTxtFile(searchedWord, fileName, &line, &column) )
