@@ -1,5 +1,6 @@
 /*
     gb/lesson_6/task4.cpp
+    -std=c++2a
 
     (3. Написать программу, которая создаст два текстовых файла (*.txt), примерно
     по 50-100 символов в каждом (особого значения не имеет с каким именно 
@@ -11,7 +12,6 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <filesystem>
 
 void writeFile(std::string filename)
 {
