@@ -120,8 +120,8 @@ int main()
     std::cout << "Размер структуры: " << sizeof(Emploee) << std::endl;
 
     std::ofstream file("Emploee.txt");
-    std::string structText("\
-#pragma pack(push, 1)\n\
+    std::string structText(
+"#pragma pack(push, 1)\n\
 struct Emploee\n\
 {\n\
     std::string firstName = \"null\";\n\
